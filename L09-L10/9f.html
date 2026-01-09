@@ -5,16 +5,13 @@
     <title>Lesson 9-F</title>
     <style>
       p{
-        background-color: white;
         font-family: Arial;
         margin-top: 0px;
         margin-bottom: 0px;
       }
       .hdiv-profile{
-        display: inline-block;
-        width: 175px;
+        width: 100%;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-        margin-right: 15px;
       }
       .pfp{
         width: 175px;
@@ -47,56 +44,69 @@
         font-size: 16px;
       }
 
-      .hdiv-friends,
-      .pfp-div{
-        display: inline-block;
-        vertical-align: middle;
-      }
-
       .pfp-div{
         width: 30px;
-        margin-left: 8px;
       }
 
       .my-pfp{
         width: 30px;
         border-radius: 100%;
       }
+
+      .main-grid{
+        display: grid;
+        grid-template-columns: 175px 175px 175px;
+        column-gap: 15px;
+      }
+
+      .info-grid{
+        display: grid;
+        grid-template-columns: 30px 1fr;
+        margin-left: 8px;
+        align-items: center;
+        column-gap: 5px;
+      }
+
+      .mutual-friends{
+        vertical-align: middle;
+      }
     </style>
   </head>
   <body>
-    <div class="hdiv-profile">
-      <div><img class="pfp" src="c1.webp"></div>
-      <div><p class="name">Oliver</p></div>
-      <div class="vdiv-info">
-        <div class="pfp-div"><img class="my-pfp" src="me.webp"></div>
-        <div class="hdiv-friends">
-          <p class="mutual-friends">2 mutual friends</p>
+    <div class="main-grid">
+      <div class="hdiv-profile">
+        <div><img class="pfp" src="c1.webp"></div>
+        <div><p class="name">Oliver</p></div>
+        <div class="info-grid">
+          <div class="pfp-div"><img class="my-pfp" src="me.webp"></div>
+          <div class="mutual-friends">
+            <p>2 mutual friends</p>
+          </div>
         </div>
+        <div><button class="add-button">Add Friend</button></div>
       </div>
-      <div><button class="add-button">Add Friend</button></div>
-    </div>
-    <div class="hdiv-profile">
-      <div><img class="pfp" src="c2.webp"></div>
-      <div><p class="name">Mimi</p></div>
-      <div class="vdiv-info">
-        <div class="pfp-div"><img class="my-pfp" src="me.webp"></div>
-        <div class="hdiv-friends">
-          <p class="mutual-friends">3 mutual friends</p>
+      <div class="hdiv-profile">
+        <div><img class="pfp" src="c2.webp"></div>
+        <div><p class="name">Mimi</p></div>
+        <div class="info-grid">
+          <div class="pfp-div"><img class="my-pfp" src="me.webp"></div>
+          <div class="hdiv-friends">
+            <p class="mutual-friends">3 mutual friends</p>
+          </div>
         </div>
+        <div><button class="add-button">Add Friend</button></div>
       </div>
-      <div><button class="add-button">Add Friend</button></div>
-    </div>
-    <div class="hdiv-profile">
-      <div><img class="pfp" src="c3.webp"></div>
-      <div><p class="name">Rex</p></div>
-      <div class="vdiv-info">
-        <div class="pfp-div"><img class="my-pfp" src="me.webp"></div>
-        <div class="hdiv-friends">
-          <p class="mutual-friends">4 mutual friends</p>
+      <div class="hdiv-profile">
+        <div><img class="pfp" src="c3.webp"></div>
+        <div><p class="name">Rex</p></div>
+        <div class="info-grid">
+          <div class="pfp-div"><img class="my-pfp" src="me.webp"></div>
+          <div class="hdiv-friends">
+            <p class="mutual-friends">4 mutual friends</p>
+          </div>
         </div>
+        <div><button class="add-button">Add Friend</button></div>
       </div>
-      <div><button class="add-button">Add Friend</button></div>
     </div>
   </body>
 </html>
